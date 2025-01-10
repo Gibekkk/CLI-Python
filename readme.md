@@ -45,6 +45,7 @@ Welcome to **ChillCLI**, the ultimate vibe-packed command-line interface for any
    ```bash
    python python_files/main.py
    ```
+   Or run the executable file in `dist/main.exe`
 
 ---
 

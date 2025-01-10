@@ -1,10 +1,12 @@
 import os
 import shutil
 import sys
+from colorama import init
 
 from assets import *
 from extra_commands import *
 
+init(autoreset=True)
 def ls():
     items = os.listdir(os.getcwd())
     for item in items:
@@ -116,7 +118,8 @@ def main():
     print(logo)
     print(introText)
     while True:
-        command = input("\033[2;37;44mChillCLI>\033[0m ").strip().split()
+        print("\033[2;37;44mChillCLI>\033[0m ", end="")
+        command = input().strip().split()
         if not command:
             continue
 
@@ -158,6 +161,7 @@ def main():
             coinflip()
             
         elif cmd == "exit":
+            print(logo2)
             print(outrotext)
             sys.exit()
             
